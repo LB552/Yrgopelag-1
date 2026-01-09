@@ -1,3 +1,21 @@
+# Feedback
+## Styling
+calendar.css:1-6 - The date layout doesn't match with January 2026 in reality. Consider adding three white spaces on the first week row, so as to have January 1st be a thursday. This could be achieved with a for loop in 
+
+styles.css:3 - "padding: 0;" doesn't achieve anything and can be removed entirely.
+
+form.php:45&62 - “Adventure” and “Water” use different tags, h4 and h3 respectively. For consistency, use either or. The recommended tag is h4, since this text is lower in hierarchy than "Select features" above, which uses h3 tags.
+
+## Semantics
+feature-info.php - You use h2 both for the top text on line 2 and for the feature cards. Syling-wise this causes no issues, since you apply styling to the top text by class. However, search engines and screen readers ignore CSS and rely on correct semantic heading levels.
+
+## Structure
+feature-info.php:4-25 - DRY: You code similar structure multiple times. Avoid repetition using dynamic HTML generation.
+
+form.php:46-65 - DRY: You code similar structure multiple times. Avoid repetition using dynamic HTML generation.
+
+footer.php:5-9 - DRY: You code similar structure multiple times. Avoid repetition using dynamic HTML generation.
+
 # Yrgopelag
 
 ## Project description
